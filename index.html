@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercado Local del Pueblo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #00796b, #004d40);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    form h2 {
+      margin-bottom: 1rem;
+      color: #00796b;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #00796b;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    #listaProductos {
+      margin-top: 2rem;
+    }
+
+    #listaProductos h2 {
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+
+    .producto {
+      background: #ffffff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #00796b;
+      border-radius: 5px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .producto h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .producto p {
+      margin: 0.25rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mercado Local del Pueblo</h1>
+    <p>Compra y vende productos en tu comunidad</p>
+  </header>
+
+  <main>
+    <section>
+      <form id="formProducto">
+        <h2>Publicar Producto</h2>
+        <input type="text" id="titulo" placeholder="Título del producto" required />
+        <textarea id="descripcion" placeholder="Descripción" rows="3" required></textarea>
+        <input type="number" id="precio" placeholder="Precio en Bs." required />
+        <button type="submit">Publicar</button>
+      </form>
+    </section>
+
+    <section id="listaProductos">
+      <h2>Productos disponibles</h2>
+      <!-- Aquí aparecerán los productos -->
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
